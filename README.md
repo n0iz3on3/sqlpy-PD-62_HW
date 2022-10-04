@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS AlbumPerformer (
 );
 
 CREATE TABLE IF NOT EXISTS TrackCollection (
-	track_id INTEGER NOT NULL REFERENCES Track(id),
+	track_id INTEGER REFERENCES Track(id),
 	collection_id INTEGER REFERENCES Collection(id),
 	CONSTRAINT tc PRIMARY KEY (track_id, collection_id)
 );
