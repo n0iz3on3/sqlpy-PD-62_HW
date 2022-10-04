@@ -1,8 +1,8 @@
-## Task 1. Music_DB. 
-# Scheme DB music1
+# Task 1. Music_DB. 
+## Scheme DB music1
 ![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/music-scheme1.jpg)
 
-# Commands
+## Commands
 
 ```sql
 CREATE TABLE IF NOT EXISTS Genre (
@@ -60,11 +60,11 @@ CREATE TABLE IF NOT EXISTS TrackCollection (
 ## Scheme DB music2
 ![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/music-scheme2.jpg)
 
-## Task 2. Employees_DB.
-# Scheme DB employees
+# Task 2. Employees_DB.
+## Scheme DB employees
 ![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/Employees.jpg)
 
-# Commands
+## Commands
 
 ```sql
 CREATE TABLE IF NOT EXISTS Employee (
@@ -85,6 +85,6 @@ CREATE TABLE IF NOT EXISTS EmployeePosition (
 );
 ```
 
-# Scheme DB employees2
+## Scheme DB employees2
 ![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/Employees2.jpg)
 
