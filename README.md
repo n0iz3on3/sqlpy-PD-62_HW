@@ -12,13 +12,13 @@ CREATE TABLE IF NOT EXISTS Genre (
 
 CREATE TABLE IF NOT EXISTS Performer (
 	id SERIAL PRIMARY KEY,
-	perf_name VARCHAR(40) NOT NULL,
+	perf_name VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS Album (
 	id SERIAL PRIMARY KEY, 
 	album_name VARCHAR(40) NOT NULL,
-	release_year INTEGER CHECK (release_year > 1980),
+	release_year INTEGER CHECK (release_year > 1980)
 );
 
 CREATE TABLE IF NOT EXISTS Track (
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS Track (
 CREATE TABLE IF NOT EXISTS Collection (
 	id SERIAL PRIMARY KEY,
 	collection_name VARCHAR(60) NOT NULL,
-	release_year INTEGER CHECK (release_year > 1980),
+	release_year INTEGER CHECK (release_year > 1980)
 );
 
 CREATE TABLE IF NOT EXISTS GenrePerformer (
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS TrackCollection (
 
 # Task 2. Employees_DB.
 ## Scheme DB employees
-![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/Employees.jpg)
+![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/Employee1.jpg)
 
 ## Commands
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS TrackCollection (
 CREATE TABLE IF NOT EXISTS Employee (
 	id SERIAL PRIMARY KEY,
 	employee_name VARCHAR(60) NOT NULL,
-	chief INTEGER REFERENCES Position_e(id)
+	chief INTEGER REFERENCES Employee(id)
 );
 
 CREATE TABLE IF NOT EXISTS Position_e (
@@ -79,5 +79,5 @@ CREATE TABLE IF NOT EXISTS EmployeePosition (
 ```
 
 ## Scheme DB employees2
-![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/Employees2.jpg)
+![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/Employee2.jpg)
 
