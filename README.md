@@ -1,6 +1,6 @@
 # Task 1. Music_DB. 
 ## Scheme DB music1
-![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/music-scheme1.jpg)
+![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/SQLPY-62-HW-2-Page-1.drawio.png)
 
 ## Commands
 
@@ -13,29 +13,25 @@ CREATE TABLE IF NOT EXISTS Genre (
 CREATE TABLE IF NOT EXISTS Performer (
 	id SERIAL PRIMARY KEY,
 	perf_name VARCHAR(40) NOT NULL,
-	genre_id INTEGER NOT NULL REFERENCES Genre(id)
 );
 
 CREATE TABLE IF NOT EXISTS Album (
 	id SERIAL PRIMARY KEY, 
 	album_name VARCHAR(40) NOT NULL,
-	release_date date,
-	performer_id INTEGER NOT NULL REFERENCES Performer(id)
+	release_date date CHECK (release_date > 1980),
 );
 
 CREATE TABLE IF NOT EXISTS Track (
 	id SERIAL PRIMARY KEY,
 	track_name VARCHAR(60) NOT NULL,
-	duration time,
+	duration_sec INTEGER CHECK (duration_sec > 100),
 	album_id INTEGER REFERENCES Album(id)
 );
 
 CREATE TABLE IF NOT EXISTS Collection (
 	id SERIAL PRIMARY KEY,
 	collection_name VARCHAR(60) NOT NULL,
-	release_date date,
-	album_id INTEGER REFERENCES Album(id),
-	track_id INTEGER NOT NULL REFERENCES Track(id)
+	release_date date CHECK (release_date > 1980),
 );
 
 CREATE TABLE IF NOT EXISTS GenrePerformer (
@@ -56,9 +52,6 @@ CREATE TABLE IF NOT EXISTS TrackCollection (
 	CONSTRAINT tc PRIMARY KEY (track_id, collection_id)
 );
 ```
-
-## Scheme DB music2
-![](https://github.com/n0iz3on3/sqlpy-PD-62_HW-2/blob/main/music-scheme2.jpg)
 
 # Task 2. Employees_DB.
 ## Scheme DB employees
